@@ -9,7 +9,7 @@ COPY app/requirements.txt app/
 
 # Instala o pip e as dependências do requirements.txt diretamente
 RUN python -m pip install --upgrade pip && \
-    pip install -r app/requirements.txt psycopg2-binary watchdog
+    pip install -r app/requirements.txt psycopg2-binary
 
 # Copia todo o conteúdo do diretório local para o diretório /app/create-apis-base-unica no contêiner
 COPY . .
