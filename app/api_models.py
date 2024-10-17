@@ -16,3 +16,12 @@ usuarios_model = api.model("Usuarios", {
 
 })
 
+registro_model = api.model("Registro", {
+    "email": fields.String(required=True),
+    "cpf": fields.String(required=True),
+    "nome": fields.String(required=True),
+    "departamento": fields.Integer(required=True),
+    "nivel_acesso_id": fields.Integer(required=True),
+    "password": fields.String(required=True),
+ 
+})

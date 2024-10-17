@@ -13,33 +13,10 @@ services:
     networks:
       - webnet      
 
-  pgadmin:
-    image: dpage/pgadmin4
-    restart: always
-    environment:
-      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
-      PGADMIN_LISTEN_PORT: 80
-    ports:
-      - "5050:80"
-    volumes:
-      - ./data:/var/lib/postgresql/data 
-    depends_on:
-      - db
-    networks:
-      - webnet 
-
   flaskmigrate:
     build:
       context: ./flaskmigrate
       dockerfile: dockerfile
-    networks:
-      - webnet 
-
-  script:
-    build:
-      context: ./script
-      dockerfile: Dockerfile
     networks:
       - webnet 
 
