@@ -1,4 +1,4 @@
-## Com flask Restx
+## Com Flask Restx
 _Com docker-compose para configuração de ambiente_
 
 ### Instruções de instalação:
