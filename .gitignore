@@ -1,4 +1,2 @@
-.env/
-app/.env
+.env
 flaskmigrate/.env
-script/.env
