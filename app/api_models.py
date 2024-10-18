@@ -4,7 +4,7 @@ from .extensions import api
 
 
 login_model = api.model( "login", {
-    "cpf": fields.Integer,
+    "email": fields.String,
     "password": fields.String
 })
 
@@ -18,10 +18,12 @@ usuarios_model = api.model("Usuarios", {
 
 registro_model = api.model("Registro", {
     "email": fields.String(required=True),
-    "cpf": fields.String(required=True),
     "nome": fields.String(required=True),
-    "departamento": fields.Integer(required=True),
-    "nivel_acesso_id": fields.Integer(required=True),
-    "password": fields.String(required=True),
- 
+    "password": fields.String(required=True), 
+})
+
+usuario_update_model = api.model("UsuarioUpdate", {
+    "email": fields.String(description="Email do usuário", required=False),
+    "nome": fields.String(description="Nome do usuário", required=False),
+    "password": fields.String(description="Nova senha do usuário", required=False),
 })

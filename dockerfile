@@ -18,7 +18,7 @@ COPY . .
 EXPOSE 5002
 
 # Com SSH
-# CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5002", "--reload", "app:create_app()"]
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5002", "--reload", "app:create_app()"]
 
 # Com WSL
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5002", "app:app"]
+# CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5002", "app:app"]
